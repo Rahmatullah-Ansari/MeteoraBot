@@ -4,5 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:MeteoraBot"
     StartupUri="MainWindow.xaml">
-    <Application.Resources />
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="/MeteoraBot;component/Resources/ThemeColors.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <FontFamily x:Key="RubikMedium">/MeteoraBot;component/Fonts/RubikMedium.ttf#Rubik Medium</FontFamily>
+            <FontFamily x:Key="RubikSemiBold">/MeteoraBot;component/Fonts/RubikSemiBold.ttf#Rubik SemiBold</FontFamily>
+            <FontFamily x:Key="RubikRegular">/MeteoraBot;component/Fonts/RubikRegular.ttf#Rubik</FontFamily>
+            <FontFamily x:Key="RubikLight">/MeteoraBot;component/Fonts/RubikLight.ttf#Rubik Light</FontFamily>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>

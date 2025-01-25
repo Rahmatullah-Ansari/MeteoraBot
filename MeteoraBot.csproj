@@ -16,18 +16,42 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\RubikLight.ttf" />
+    <None Remove="Fonts\RubikMedium.ttf" />
+    <None Remove="Fonts\RubikRegular.ttf" />
+    <None Remove="Fonts\RubikSemiBold.ttf" />
+    <None Remove="Images\sunIcon.png" />
     <None Remove="Phantom.zip" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="PuppeteerExtraSharp" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\sunIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Phantom.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\RubikLight.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\RubikMedium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\RubikRegular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\RubikSemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
