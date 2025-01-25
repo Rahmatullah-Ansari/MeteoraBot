@@ -15,15 +15,51 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <Label Content="Enter Account Url" />
-            <TextBox
-                MinWidth="200"
-                MinHeight="50"
-                Margin="10,5"
-                VerticalContentAlignment="Center"
-                Text="{Binding AccountUrl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-            <Button Command="{Binding ConnectAccount}" Content="Connect Account" />
+        <StackPanel Margin="30" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label
+                    Content="Enter Account Url"
+                    FontSize="16"
+                    FontWeight="SemiBold" />
+                <Border
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="5">
+                    <TextBox
+                        MinWidth="300"
+                        Margin="3,0"
+                        VerticalContentAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontSize="16"
+                        Text="{Binding AccountUrl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Border>
+            </StackPanel>
+            <StackPanel Margin="0,20,0,0" Orientation="Horizontal">
+                <Label
+                    Content="Enter Chrome Profile Path"
+                    FontSize="16"
+                    FontWeight="SemiBold" />
+                <Border
+                    BorderBrush="Gray"
+                    BorderThickness="1"
+                    CornerRadius="5">
+                    <TextBox
+                        MinWidth="300"
+                        Margin="3,0"
+                        VerticalContentAlignment="Center"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontSize="16"
+                        Text="{Binding ChromeProfile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                </Border>
+            </StackPanel>
+            <Button
+                Width="200"
+                Height="30"
+                Margin="15"
+                Command="{Binding ConnectAccount}"
+                Content="Connect Account" />
         </StackPanel>
     </Grid>
 </Window>

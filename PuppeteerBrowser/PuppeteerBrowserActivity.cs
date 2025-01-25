@@ -222,7 +222,7 @@ namespace MeteoraBot.PuppeteerBrowser
                         await requestEvent.Request.ContinueAsync();
                         while (requestEvent.Request.Response == null)
                         {
-                            await Task.Delay(500, cancellationToken.Token);
+                            await Task.Delay(500);
                         }
                         ResponseList.Add(await requestEvent.Request.Response.TextAsync());
                     }
@@ -353,7 +353,7 @@ namespace MeteoraBot.PuppeteerBrowser
             {
             }
         }
-        public async Task<bool> LaunchBrowserAsync(bool HeadLess = false,string targetUrl="",bool loadExtension=false,List<string> ExtensionCollection=null)
+        public async Task<bool> LaunchBrowserAsync(bool HeadLess = false,string targetUrl="",bool loadExtension=false,List<string> ExtensionCollection=null,string ChromeprofilePath="")
         {
             var IsLaunched = false;
             try
@@ -368,10 +368,11 @@ namespace MeteoraBot.PuppeteerBrowser
             catch { }
             return IsLaunched;
         }
-        public async Task<bool> LaunchPuppeteerBrowser(string proxy, CancellationTokenSource token, bool headLess = false,bool AddTestArgument=true,bool LoadExtension=false,List<string> Extensions=null)
+        public async Task<bool> LaunchPuppeteerBrowser(string proxy, CancellationTokenSource token, bool headLess = false,bool AddTestArgument=true,bool LoadExtension=false,List<string> Extensions=null, string ChromeprofilePath = "")
         {
             try
             {
+                string userDataDir = ChromeprofilePath;
                 string executablePath = GetExecutablePath();
                 await Task.Delay(new Random().Next(1000, 5000));
                 //token.Token.ThrowIfCancellationRequested();
@@ -385,6 +386,7 @@ namespace MeteoraBot.PuppeteerBrowser
                 var args = new List<string>()
                 {
                     "http://httpbin.org/ip",
+                    $"--user-data-dir={userDataDir}",
                     "--disable-blink-features=AutomationControlled",
                     "--disable-infobars",
                     "--start-maximized",
@@ -399,7 +401,6 @@ namespace MeteoraBot.PuppeteerBrowser
                     var CapSolverExtension = GetExtensionsCollection(Extensions);
                     args.Add($"--disable-extensions-except={CapSolverExtension}");
                     args.Add($"--load-extension={CapSolverExtension}");
-                    args.Add("--enable-automation");
                     launchOptions.IgnoredDefaultArgs = new string[] { };
                 }
                 else

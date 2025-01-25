@@ -26,7 +26,7 @@ namespace MeteoraBot.ViewModels
         {
             ThreadFactory.Instance.Start(async () =>
             {
-                await browser.LaunchBrowserAsync(false, AccountUrl, true, new List<string> { Constants.PhantomExtensionPath});
+                await browser.LaunchBrowserAsync(false, AccountUrl, true, new List<string> { Constants.PhantomExtensionPath}, ChromeprofilePath:ChromeProfile);
                 await Delay(5);
             });
         }
@@ -34,11 +34,17 @@ namespace MeteoraBot.ViewModels
         {
             await Task.Delay(TimeSpan.FromSeconds(delay));
         }
-        private string _url;
+        private string _url= "https://app.meteora.ag/";
         public string AccountUrl
         {
             get => _url;
             set => SetProperty(ref _url, value,nameof(AccountUrl));
+        }
+        private string _chromeProfile= $"C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\UserData";
+        public string ChromeProfile
+        {
+            get => _chromeProfile;
+            set => SetProperty(ref _chromeProfile, value, nameof(ChromeProfile));
         }
         public ICommand ConnectAccount {  get; set; }
         private void InitializeFolder()
