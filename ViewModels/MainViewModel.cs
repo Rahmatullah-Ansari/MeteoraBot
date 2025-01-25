@@ -1,12 +1,7 @@
 ﻿using MeteoraBot.PuppeteerBrowser;
 using MeteoraBot.ThreadUtility;
 using MeteoraBot.Utilities;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace MeteoraBot.ViewModels
