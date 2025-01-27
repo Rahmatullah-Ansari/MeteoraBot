@@ -26,8 +26,12 @@
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="5.2.1" />
+    <PackageReference Include="Microsoft.Playwright" Version="1.49.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="PuppeteerExtraSharp" Version="2.0.0" />
+    <PackageReference Include="Solana.LinkStream" Version="8.0.1" />
+    <PackageReference Include="Solana.Programs" Version="8.3.0" />
+    <PackageReference Include="Solnet.Rpc" Version="6.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +41,11 @@
     <Content Include="Phantom.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MeteoraCore\MeteoraCore.csproj" />
+    <ProjectReference Include="..\MeteoraUI\MeteoraUI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

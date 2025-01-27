@@ -1,8 +1,8 @@
-﻿using MeteoraBot.ViewModels;
+﻿using MeteoraCore.ViewModels;
 using System.Diagnostics;
 using System.Windows;
 
-namespace MeteoraBot
+namespace MeteoraCore
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

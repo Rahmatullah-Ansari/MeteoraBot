@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoraBot", "MeteoraBot.csproj", "{5440A5C6-BCE8-4C22-8CBB-0AF225F9E6EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoraUI", "..\MeteoraUI\MeteoraUI.csproj", "{B98A8889-BBAD-4A21-8C3C-4C9EAEE8C950}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoraCore", "..\MeteoraCore\MeteoraCore.csproj", "{0FC1614F-A467-4E12-9708-B7DB70644EC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5440A5C6-BCE8-4C22-8CBB-0AF225F9E6EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5440A5C6-BCE8-4C22-8CBB-0AF225F9E6EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5440A5C6-BCE8-4C22-8CBB-0AF225F9E6EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98A8889-BBAD-4A21-8C3C-4C9EAEE8C950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98A8889-BBAD-4A21-8C3C-4C9EAEE8C950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98A8889-BBAD-4A21-8C3C-4C9EAEE8C950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98A8889-BBAD-4A21-8C3C-4C9EAEE8C950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FC1614F-A467-4E12-9708-B7DB70644EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC1614F-A467-4E12-9708-B7DB70644EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC1614F-A467-4E12-9708-B7DB70644EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC1614F-A467-4E12-9708-B7DB70644EC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
